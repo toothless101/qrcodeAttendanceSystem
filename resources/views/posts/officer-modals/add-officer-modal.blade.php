@@ -12,24 +12,24 @@
                 <form>
                     <div class="row">
                     <!-- Left Side: Image Upload and Preview -->
-          <div class="col-md-6">
-            <div class="form-group">
-              <!-- Image Preview Section -->
-              <div class="d-flex justify-content-center">
-                <div class="image-holder">
-                  <img id="output" src="{{asset('img/no-image-available.png')}}" alt="Placeholder Image">
-                </div>
-                
-              </div>
-              <!-- File Upload Label 
-              <label for="customFile" class="control-label mt-3">Upload Image</label>-->
-              <!-- File Input -->
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile" name="img" accept="image/*" onchange="loadFile(event)">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-              </div>
-            </div>
-          </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <!-- Image Preview Section -->
+                        <div class="d-flex justify-content-center">
+                          <div class="image-holder">
+                            <img id="output" src="{{asset('img/no-image-available.png')}}" alt="Placeholder Image">
+                          </div>
+                          
+                        </div>
+                        <!-- File Upload Label 
+                        <label for="customFile" class="control-label mt-3">Upload Image</label>-->
+                        <!-- File Input -->
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile" name="img" accept="image/*" onchange="loadFile(event)">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                      </div>
+                    </div>
 
       <!-- Right Side: Fields -->
       <div class="col-md-6 mt-10">
@@ -103,19 +103,11 @@
 </div>-->
 
 <script>
-    // Handle form submission
-    document.getElementById('addOfficerForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
-        
-        // Here you can send the data to your backend via an AJAX call
-        console.log('New Officer Data:', data);
-
-        // Close modal and reset form
-        const modal = bootstrap.Modal.getInstance(document.getElementById('addOfficerModal'));
-        modal.hide();
-        this.reset();
-    });
+  function loadFile(event) {
+    const output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src); // Free up memory
+    }
+  }
 </script>
