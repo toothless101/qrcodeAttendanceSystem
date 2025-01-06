@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'PaScan | Officers')
+@section('title', 'SSEA | Officers')
 
 @section('content')
 
@@ -10,6 +10,7 @@
 </x-header-section>
 
     <section id="main" class="main">
+       
         <div class="d-flex justify-content-between align-items-center mb-3">
             <!-- New Officer Button -->
             <button class="btn btn-new-officer" data-bs-toggle="modal" data-bs-target="#addOfficerModal">
@@ -40,7 +41,11 @@
                 <tr>
                     <td id="name-clm">Hilary Mae Poralan</td>
                     <td>VIce President</td>
-                    <td>VIce President</td>
+                    <td>
+                            <a href="" class="" data-bs-toggle="modal" data-bs-target="#editOfficerModal">
+                                <i class="bi bi-pencil-fill" style="color: #550000;"></i>
+                            </a>
+                    </td>           
                     <td>VIce President</td>
                 </tr>
 
@@ -55,6 +60,7 @@
     </section>
     
 @include('posts.officer-modals.add-officer-modal') 
+@include('posts.officer-modals.edit-officers') 
 
     
 

@@ -1,15 +1,14 @@
 @extends('layout.app')
-@section('title', 'SSEA | Dashboard')
-
+@section('title', 'SSEA | Officer Home')
 @section('content')
- 
-@include('partials.sidebar')
+
+@include('student-officers/stud-partials.std-sidebar')
+
 <x-header-section>
-  Dashboard
+    Home
 </x-header-section>
 
-
-  <section id="main" class="main">
+<section id="main" class="main">
 
     <section class="section dashboard ">
       <section class="row">
@@ -220,8 +219,5 @@ const myDoughnutChart = new Chart(ctx, {
 
 
 </script>
-@endsection
- 
 
-  
- 
+@endsection

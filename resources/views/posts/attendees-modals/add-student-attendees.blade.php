@@ -9,9 +9,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <div class="modal-body">
-                <form>
-                    <div class="row">
+      <div class="modal-body">
+        <form>
+          <div class="row">
                     <!-- Left Side: Image Upload and Preview -->
           <div class="col-md-6">
             <div class="form-group">

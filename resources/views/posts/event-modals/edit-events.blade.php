@@ -6,19 +6,14 @@
 <!-- Bootstrap Datepicker CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-<!-- Bootstrap Multiselect Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
-
-
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ asset('css/pages-css/event.css') }}">
 
-<div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
+<div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addEventModalLabel">Create New Event</h5>
+                <h5 class="modal-title" id="addEventModalLabel">Edit Event Details</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -70,15 +65,12 @@
                             <div class="officer-icon">
                                 <img src="{{asset('img/officer-icon.png')}}" alt="">
                             </div>
-                            <div class="form-group col-md-4">
-                                <select id="multiple-checkboxes" multiple="multiple">
-                                    <option value="php">PHP</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="java">Java</option>
-                                    <option value="sql">SQL</option>
-                                    <option value="jquery">JQuery</option>
-                                    <option value=".net">.Net</option>
-                                </select>
+                            <div class="col-md-4">
+                               <select class="form-select" name="assignofficers" id="officer_id">
+                                <option selected disabled>Select an Officer</option>
+                                <option value="">No Officer Available</option>
+                                <option value="officer_id"></option>
+                               </select>
                             </div>
                             <div class="addOfficer">
                                 <button class="btn btn-new-officer">
@@ -212,14 +204,6 @@
 
 <script>
   $(document).ready(function () {
-    $('#multiple-checkboxes').multiselect({
-      includeSelectAllOption: true, // Add a "Select All" option
-      enableFiltering: true,        // Enable search filter
-      buttonWidth: '100%',          // Adjust button width
-      nonSelectedText: 'Select Officers', // Placeholder text
-      selectAllText: 'Select All',  // Text for "Select All" option
-      allSelectedText: 'All Selected' // Text when all options are selected
-    });
     // Initialize the datepicker (using jQuery)
     $('.datepicker').datepicker({
         format: 'dd/mm/yyyy',

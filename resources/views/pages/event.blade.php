@@ -50,13 +50,16 @@
                     <td>Description</td>
                     <td>Officer Name</td>
                     <td>Ongoing</td>
-                    <td>Edit/Delete</td>
+                    <td><a href="" class="" data-bs-toggle="modal" data-bs-target="#editEventModal">
+                        <i class="bi bi-pencil-fill" style="color: #550000;"></i>
+                    </a></td>
                 </tr>
             </tbody>
         </table> 
 </section>
 
 @include('posts.event-modals.create-new-event-modal')
+@include('posts.event-modals.edit-events')
 
 
 <script>

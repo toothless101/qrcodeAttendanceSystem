@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'SSEA | QR Code')</title>
     <link rel="icon" type="image" href="{{asset('img/418786725_1079231866656453_7752077010997336838_n (1).png')}}">
 
