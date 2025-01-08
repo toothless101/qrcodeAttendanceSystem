@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/student-officer-css/std_pages.css') }}">
 
 @include('student-officers/stud-partials.std-sidebar')
+@include('student-officers/stud-partials.nav-bottom')
 
 <x-header-section>
     Attendance
@@ -50,8 +51,8 @@
          <!--NUMBER OF ENTRIES TO SHOW-->
     
 
-        <div class="attendanc-table">
-            <table id="student-attendance_dataTable">
+        <div class="table-container">
+            <table id="student-attendance_dataTable" class="display nowrap">
             <thead>
                 <tr>
                     <th rowspan="2">Roll No.</th>
@@ -107,7 +108,7 @@
 <script>
     $(document).ready(function () {
         $('#student-attendance_dataTable').DataTable({
-            dom: 't<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
+            dom: '<"mb-2"<"table-list"l>><"table-responsive"t><"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
             language: {
                 lengthMenu: "Show _MENU_ entries"
             }
@@ -118,5 +119,6 @@
         });
 
     });
+
 </script>
 @endsection

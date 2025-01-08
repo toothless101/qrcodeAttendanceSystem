@@ -48,6 +48,11 @@
 
 
 /*table*/
+.table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

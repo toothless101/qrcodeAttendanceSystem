@@ -343,6 +343,9 @@ body::-webkit-scrollbar {
 
 /*DASHBOARD*/
 
+.dashboard{
+  display: flex;
+}
 .dashboard .info-card {
   padding-bottom: 10px;
   background-color: #550000;
@@ -350,7 +353,7 @@ body::-webkit-scrollbar {
 
 }
 
-.dashboard .sales-card{
+.dashboard .current-card{
   display: flex;
   flex-direction: row;
   position: relative;
@@ -601,4 +604,3 @@ td:nth-child(1){
 /*------------------------------------------------------------*/
 /*  RESPONSIVE
 --------------------------------------------------------------*/
-

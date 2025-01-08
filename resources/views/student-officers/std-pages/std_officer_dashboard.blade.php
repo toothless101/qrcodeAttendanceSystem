@@ -2,6 +2,8 @@
 @section('title', 'SSEA | Officer Home')
 @section('content')
 
+<link rel="stylesheet" href="{{ asset('css/student-officer-css/mobile-view/mobile-view.css')}}">
+
 @include('student-officers/stud-partials.std-sidebar')
 
 <x-header-section>
@@ -10,41 +12,11 @@
 
 <section id="main" class="main">
 
-    <section class="section dashboard ">
-      <section class="row">
+    <div class="section dashboard d-flex">
+      <div class="row">
 
-        <section class="col-lg-12">
-          <section class="row">
-
-            <!-- Customers Card
-            <div class="col-xxl-1 col-xl-1 ">
-
-              <div class="card info-card customers-card ">
-                
-             
-                <div class="card-date">
-                  <label id="date"></label>
-              </div>
-              <div class="stud_gif">
-                <img src="img/images/image-removebg-preview (45).png">
-              </div>
-
-                <div class="card-body">
-
-                  <h5 class="card-title-info">Welcome back, <span class="stud_name" id="stud_name"></span>!</h5>
-               
-                    <div class="card-info">
-                        <h6>Always stay updated in your student portal.</h6>
-                    </div>
-                  
-                    
-                    
-
-                </div> 
-              </div>
-
-            </div> End of Top card-->
-
+        <div class="col-lg-12">
+          <div class="row">
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card" id="wlcm_card">
 
@@ -61,14 +33,12 @@
                   <h5 id="wlcm_mssge_card" class="wlcm_mssge_card">Welcome back!</h5>
 
                 </div>
-                 <!--<div class="dash_illustrations">
-                      <img src="img/images/Thesis-rafiki-removebg-preview.png" alt="student doing thesis">
-                    </div>-->
+                 
               </div>
-            </div><!-- End Number of Exams Paid -->  
+            </div><!-- Welcome message -->  
   
               <div class="col-xxl-4 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card current-card">
   
                   <div class="card-body">
   
@@ -89,7 +59,7 @@
               </div><!-- End Total Assessmet -->
   
               <div class="col-xxl-4 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card current-card">
   
                   <div class="card-body">
   
@@ -125,7 +95,7 @@
               </div><!-- End Sof Current Balance -->
   
               <div class="col-xxl-4 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card current-card">
   
                   <div class="card-body" id="chart-container">
                     <!-- Title -->
@@ -158,13 +128,15 @@
                   
                 </div>
               </div><!-- End Sof Current Balance -->
-            </section>
+            </div>
               
-          </section>
-        </section>
-        </section>
-      </section>
-    </section><!-- End #main -->
+          </div>
+        </div>
+        </div>
+</section>
+    <!-- End #main -->
+
+@include('student-officers/stud-partials.nav-bottom')
 
 <script>
   

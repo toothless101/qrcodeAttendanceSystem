@@ -1,8 +1,10 @@
 @extends('layout.app')
-@section('title', 'SSEA | Officer Home')
+@section('title', 'SSEA | Events')
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/student-officer-css/std_pages.css') }}">
+
+@include('student-officers/stud-partials.nav-bottom')
 
 @include('student-officers/stud-partials.std-sidebar')
 
@@ -21,7 +23,8 @@
         </div>
     </div>
 
-    <table id="eventdataTable" class="display mt-5">
+    <div class="table-container mt-4">
+    <table id="eventdataTable" class="display">
         <thead>
             <tr>
                 <th>Event Name</th>
@@ -40,13 +43,14 @@
                 <td>Officer Name</td>
             </tr>
         </tbody>
-    </table> 
+    </table>
+    </div> 
 </section>
 
 <script>
     $(document).ready(function () {
         $('#eventdataTable').DataTable({
-            dom: 't<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
+            dom: '<"mb-2"<"table-list"l>><"table-responsive"t><"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
             language: {
                 lengthMenu: "Show _MENU_ entries"
             }
@@ -57,5 +61,6 @@
         });
 
     });
+
 </script>
 @endsection

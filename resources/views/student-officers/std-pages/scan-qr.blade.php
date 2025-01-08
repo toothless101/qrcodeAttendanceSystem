@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/student-officer-css/std_pages.css') }}">
 
 @include('student-officers/stud-partials.std-sidebar')
-
+@include('student-officers/stud-partials.nav-bottom')
 <x-header-section>
     Scan QR
 </x-header-section>
@@ -27,7 +27,7 @@
             <div class="col-md-6">
                 <div class="table-container">
                     <h6 class="table-title d-flex justify-content-center">Present Attendees</h6>
-                    <table class="attendees-table" id="attendees-table">
+                    <table class="attendees-table display" id="attendees-table">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -60,7 +60,7 @@
 <script>
      $(document).ready(function () {
         $('#attendees-table').DataTable({
-            dom: 't<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
+            dom: '<"d-flex justify-content-between mb-2"<"table-list"l><"table-filter"f>><"table-responsive"t><"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
             language: {
                 lengthMenu: "Show _MENU_ entries"
             }

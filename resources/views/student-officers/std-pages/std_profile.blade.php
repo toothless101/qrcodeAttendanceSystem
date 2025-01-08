@@ -5,6 +5,8 @@
 
 <link rel="stylesheet" href="{{ asset('css/student-officer-css/std_pages.css') }}">
 
+@include('student-officers/stud-partials.nav-bottom')
+
 @include('student-officers/stud-partials.std-sidebar')
 
 <x-header-section>
@@ -21,7 +23,7 @@
             <h4 for="officerprofile_name">Hilary</h4>
         </div>
 
-        <div class="align-items-center mt-4" style="max-width: 800px; margin: auto;"> <!-- Centralized and wider container -->
+        <div class="align-items-center mt-4 mb-3" style="max-width: 800px; margin: auto;"> <!-- Centralized and wider container -->
             <!-- Name -->
             <div class="d-flex align-items-center mb-3 editable-field gap-4" style="width: 100%;">
                 <div>
@@ -92,7 +94,7 @@
 
 
     <!----ASSIGNED EVENTS--->
-    <div class="assigned-events d-flex justify-content-between align-items-center mb-3 mt-5">
+    <div class="assigned-events d-flex justify-content-between align-items-center mb-3">
         <h5 id="assigned-events" class="fw-light fs-6" style="color:#550000;">Assigned Events</h5>
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search">
@@ -172,7 +174,7 @@
 
     $(document).ready(function () {
         $('#officer-assigned-event-table').DataTable({
-            dom: 't<"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
+            dom: '<"mb-2"<"table-list"l>><"table-responsive"t><"d-flex justify-content-between mt-2"<"table-info"i><"table-pagination"p>>r',
             language: {
                 lengthMenu: "Show _MENU_ entries"
             }
