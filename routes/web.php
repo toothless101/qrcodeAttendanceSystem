@@ -23,6 +23,10 @@ Route::get('/edit_officers', [OfficerController::class, 'edit_officers'])->name(
 
 //STUDENT-OFFICERS
 Route::get('/officerdashboard', [StudentOfficerController::class, 'std_dashboard'])->name('std_dashboard');
+Route::get('/scan_qr', [StudentOfficerController::class, 'scan_qr'])->name('scan_qr');
+Route::get('/std_events', [StudentOfficerController::class, 'std_events'])->name('std_events');
+Route::get('/std_attendance', [StudentOfficerController::class, 'std_attendance'])->name('std_attendance');
+Route::get('/std_profile', [StudentOfficerController::class, 'std_profile'])->name('std_profile');
 
 //POST ACTIONS
 Route::post('/officer/create', [OfficerController::class, 'create_officer'])->name('officer.create');

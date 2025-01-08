@@ -284,81 +284,6 @@ body::-webkit-scrollbar {
   font-weight: 600;
 }
 
-.home-section .header-nav .badge-number {
-  position: absolute;
-  inset: -2px -5px auto auto;
-  font-weight: normal;
-  font-size: 12px;
-  padding: 3px 6px;
-}
-
-.home-section .header-nav .notifications {
-  inset: 8px -15px auto auto !important;
-}
-
-.home-section .header-nav .notifications .notification-item {
-  display: flex;
-  align-items: center;
-  padding: 15px 10px;
-  transition: 0.3s;
-}
-
-.home-section .header-nav .notifications .notification-item i {
-  margin: 0 20px 0 10px;
-  font-size: 24px;
-}
-
-.home-section .header-nav .notifications .notification-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.home-section .header-nav .notifications .notification-item p {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #919191;
-}
-
-.home-section .header-nav .notifications .notification-item:hover {
-  background-color: #f6f9ff;
-}
-
-.home-section .header-nav .messages {
-  inset: 8px -15px auto auto !important;
-}
-
-.home-section .header-nav .messages .message-item {
-  padding: 15px 10px;
-  transition: 0.3s;
-}
-
-.home-section .header-nav .messages .message-item a {
-  display: flex;
-}
-
-.home-section .header-nav .messages .message-item img {
-  margin: 0 20px 0 10px;
-  max-height: 40px;
-}
-
-.home-section .header-nav .messages .message-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #444444;
-}
-
-.home-section .header-nav .messages .message-item p {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #919191;
-}
-
-.home-section .header-nav .messages .message-item:hover {
-  background-color: #f6f9ff;
-}
-
 .home-section .header-nav .profile {
   min-width: 240px;
   padding-bottom: 0;
@@ -416,9 +341,6 @@ body::-webkit-scrollbar {
   width: calc(100% - 78px);
 }
 
-
-
-
 /*DASHBOARD*/
 
 .dashboard .info-card {
@@ -472,24 +394,6 @@ body::-webkit-scrollbar {
   /*padding: 15px;*/
 }
 
-.card .stud_gif{
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  width: calc(90% - 6px);
-  height: 250px;
-  margin-top: -28px;
-  
-}
-.sidebar.close .stud_gif{
-  right: 100px;
-}
-
-
-.card .stud_gif img{
-  height: 13.2rem;
-  margin-top: 10px;
-}
 
 .card {
   margin-bottom: 30px;
@@ -691,4 +595,10 @@ td:nth-child(1){
   font-size: 10px; /* Adjust the font size of the legend text */
   margin-bottom: 5px; /* Add some space between legend items */
 }
+
+
+
+/*------------------------------------------------------------*/
+/*  RESPONSIVE
+--------------------------------------------------------------*/
 

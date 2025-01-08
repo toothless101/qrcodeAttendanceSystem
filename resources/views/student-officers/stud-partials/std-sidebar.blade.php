@@ -25,7 +25,7 @@
 
         <!--Officers-->
         <li>
-            <a href="" class="{{request()->routeIs('officer') ? 'active' : ''}}">
+            <a href="{{route('scan_qr')}}" class="{{request()->routeIs('scan_qr') ? 'active' : ''}}">
                 <i class="fa-solid fa-qrcode"></i>
                 <span class="link_name">Scan QR</span>
             </a>
@@ -64,7 +64,7 @@
 
         <!-- Events -->
         <li>
-            <a href="" class="{{request()-> routeIs ('attendance') ? 'active' : ''}}">
+            <a href="{{route('std_events')}}" class="{{request()-> routeIs ('std_events') ? 'active' : ''}}">
                 <i class="fa-solid fa-calendar-days"></i>
                 <span class="link_name">Events</span>
             </a>
@@ -75,7 +75,7 @@
 
         <!--Attendance-->
         <li>
-            <a href="{{route('report')}}" class="{{request()-> routeIs ('report') ? 'active' : ''}}">
+            <a href="{{route('std_attendance')}}" class="{{request()-> routeIs ('std_attendance') ? 'active' : ''}}">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span class="link_name">Attendance</span>
             </a>
@@ -85,7 +85,7 @@
         </li>
 
         <li>
-            <a href="" class="{{request()-> routeIs ('report') ? 'active' : ''}}">
+            <a href="{{route('std_profile')}}" class="{{request()-> routeIs ('std_profile') ? 'active' : ''}}">
                 <i class="fa-solid fa-user"></i>
                 <span class="link_name">Profile</span>
             </a>
