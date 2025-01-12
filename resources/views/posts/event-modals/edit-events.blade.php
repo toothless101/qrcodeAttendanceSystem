@@ -6,6 +6,9 @@
 <!-- Bootstrap Datepicker CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
+<!--MULTISELECT DROPDOWN-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/css/multi-select-tag.css">
+
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ asset('css/pages-css/event.css') }}">
 
@@ -65,12 +68,11 @@
                             <div class="officer-icon">
                                 <img src="{{asset('img/officer-icon.png')}}" alt="">
                             </div>
-                            <div class="col-md-4">
-                               <select class="form-select" name="assignofficers" id="officer_id">
-                                <option selected disabled>Select an Officer</option>
-                                <option value="">No Officer Available</option>
-                                <option value="officer_id"></option>
-                               </select>
+                            <div class="form-group col-md-4">
+                                <select  name="selectOfficer" id="editselectedOfficer" placeholder="Select Officer" multiple>
+                                    <option value="1">Hilary Poralan</option>
+                                    <option value="2">Hannah Mae Lumangtad</option>
+                                </select>
                             </div>
                             <div class="addOfficer">
                                 <button class="btn btn-new-officer">
@@ -202,6 +204,9 @@
 <!-- Bootstrap Datepicker JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
+<!--MULTISELECT DROPDOWN-->
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/js/multi-select-tag.js"></script>
+
 <script>
   $(document).ready(function () {
     // Initialize the datepicker (using jQuery)
@@ -252,4 +257,18 @@
     updateLayout(); // Update layout when page loads
 });
 
+//MULTISELECT DROPDOWN
+new MultiSelectTag("editselectedOfficer", {
+        rounded: true,
+        shadow: false,
+        placeholder: 'Search',
+        tagColor:{
+            textColor: '#550000',
+            borderColor: '#550000',
+            bgColor: 'transparent',
+        },
+        onChange:function(values){
+            console.log(value)
+        }
+    });
 </script>

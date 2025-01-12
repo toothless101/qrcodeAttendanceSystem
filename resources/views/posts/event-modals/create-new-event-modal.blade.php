@@ -10,6 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
 
+<!--MULTISELECT DROPDOWN-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/css/multi-select-tag.css">
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ asset('css/pages-css/event.css') }}">
@@ -71,13 +73,9 @@
                                 <img src="{{asset('img/officer-icon.png')}}" alt="">
                             </div>
                             <div class="form-group col-md-4">
-                                <select id="multiple-checkboxes" multiple="multiple">
-                                    <option value="php">PHP</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="java">Java</option>
-                                    <option value="sql">SQL</option>
-                                    <option value="jquery">JQuery</option>
-                                    <option value=".net">.Net</option>
+                                <select  name="selectOfficer" id="selectOfficer" placeholder="Select Officer" multiple>
+                                    <option value="1">Hilary Poralan</option>
+                                    <option value="2">Hannah Mae Lumangtad</option>
                                 </select>
                             </div>
                             <div class="addOfficer">
@@ -210,6 +208,8 @@
 <!-- Bootstrap Datepicker JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
+<!--MULTISELECT DROPDOWN-->
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/js/multi-select-tag.js"></script>
 <script>
   $(document).ready(function () {
     $('#multiple-checkboxes').multiselect({
@@ -268,4 +268,18 @@
     updateLayout(); // Update layout when page loads
 });
 
+//MULTISELECT DROPDOWN
+    new MultiSelectTag("selectOfficer", {
+        rounded: true,
+        shadow: false,
+        placeholder: 'Search',
+        tagColor:{
+            textColor: '#550000',
+            borderColor: '#550000',
+            bgColor: 'transparent',
+        },
+        onChange:function(values){
+            console.log(value)
+        }
+    });
 </script>

@@ -7,7 +7,7 @@
     <ul class="nav-links">
         <!-- Dashboard -->
         <li>
-            <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+            <a href="{{ url('/') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">
                 <i class="fa-solid fa-gauge-high"></i>
                 <span class="link_name">Dashboard</span>
             </a>
